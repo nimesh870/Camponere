@@ -49,7 +49,7 @@ Open `http://localhost:5173`, choose **Explore Demo Accounts**, then continue as
 - **Demo Client** (`client.demo@example.com`): create/review agreements, fund preview escrow, and approve milestones.
 - **Demo Freelancer** (`freelancer.demo@example.com`): view the shared Website Development agreement and submit deliverables.
 
-The development password is `ComponereDemo2026!` when signing in through an API client. The UI also supports creating a client or freelancer account with `/auth/register` and signing in with `/auth/login`; it does not place passwords in browser storage. Set `DEMO_PASSWORD` to override the seeded demo password locally. When `DEMO_MODE=false` (the default), seeded demo users and demo agreement data are not provisioned, but normal registration and login remain available.
+Set `DEMO_PASSWORD` to supply the development password through environment variables when signing in through an API client. The UI also supports creating a client or freelancer account with `/auth/register` and signing in with `/auth/login`; it does not place passwords in browser storage. When `DEMO_MODE=false` (the default), seeded demo users and demo agreement data are not provisioned, but normal registration and login remain available.
 
 The seeded Website Development agreement is explicitly labeled **DEMO DATA**. Its preview funding endpoint never claims a blockchain transaction. Solana wallet connection is available on Devnet, but actual funding/release requires a deployed Anchor program, configured `SOLANA_PROGRAM_ID`, funded wallets, and wallet signatures; no fake signatures are generated. Set `WEB_ORIGIN` to the exact browser origin serving the Vite app so API authentication requests pass CORS validation.
 
